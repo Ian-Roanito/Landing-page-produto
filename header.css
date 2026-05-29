@@ -1,0 +1,140 @@
+
+#header {
+    width: 100%;
+    padding: 30px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    transition: 0.5s;
+
+    .interface {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .mobile-menu {
+            display: none;
+
+            #btnMobile {
+                width: 40px;
+                height: 40px;
+                background-color: white;
+                border: none;
+                cursor: pointer;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349);
+    
+                i {
+                    font-size: 18px;
+                    color: black;
+                }
+
+            }
+        }
+
+        .nav-list {
+            background-color: transparent;
+            width: 500px;
+
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid transparent;
+                    transition: border 0.5s;
+
+                    &:hover {
+                        border-color: white;;
+                    }
+                }
+                
+            }
+
+        }
+
+        .btn-header-contato {
+            text-decoration: none;
+            background-color: white;
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+        }
+    }
+
+    &.rolar {
+        padding: 20px 0px;
+        background-color: rgb(59, 59, 124);
+    }
+
+
+    &.rolar .nav-list ul a {
+        color: white;
+    }
+}
+
+@media (max-width: 950px) {
+
+    /* Usar essas configurações para o menu mobile */
+    html, body {
+        overflow-x: hidden;
+    }
+
+
+    #header .interface .mobile-menu {
+        display: block;
+        z-index: 30;
+    }
+
+    #header .interface .btn-header-contato {
+        display: none;
+    }
+
+    #header .interface .nav-list {
+        position: fixed; /* Usando o fixed pra ficar totalmente fora dos limites da interface*/
+        top: 0;
+        right: 0; /* right: 0; pra ele já ficar grudado na direita e facilitar o translateX(100%)*/
+        left: auto;
+        z-index: 25;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        transition: transform 0.5s ease-in-out;
+        transform: translateX(100%);
+
+
+        ul {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                color: black;
+            }
+        }
+
+        &.active {
+            transform: translateX(0);
+        }
+
+    
+    }
+
+    #header.rolar .nav-list {
+        top: 0;
+    }
+
+    
+}

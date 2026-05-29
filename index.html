@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <title>Landing Page Produto</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://kit.fontawesome.com/3a4a8b30ac.js" crossorigin="anonymous"></script>
+
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/carrossel.js" defer></script>
+</head>
+<body id="body">
+    <header id="header">
+        <div class="interface">
+            <div class="logo">
+                <a href="#"><img src="" alt="Logo"></a>
+            </div>
+
+            <div class="mobile-menu">
+                <button id="btnMobile" aria-label="Abrir menu de navegação"><i class="fa-solid fa-bars"></i></i></button>
+            </div>
+
+            <nav class="nav-list" id="navList">
+                <ul>
+                    <li><a href="#estatisticas">Estatisticas</a></li>
+                    <li><a href="#sobre">Introdução</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#comentarios">Comentarios</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+
+            <a href="#" aria-label="Botão contato para o WhatsApp" class="btn-header-contato">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="interface">
+                <div class="grid-hero">
+                    <div class="card-titulo">
+                        <header>
+                            <h2>Titulo Destque <span>Com Quebra</span></h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo recusandae ducimus amet praesentium voluptates modi soluta.</p>
+                        </header>
+
+                        <a href="#" class="btn-hero-whatsapp" aria-label="Entrar em contato pelo WhatsApp" ><i class="fa-brands fa-whatsapp"></i>Contato</a>
+                    
+                    </div>
+
+                    <div class="card-img">
+                        <!-- before aqui no css - estilo circulo -->
+                        <img src="images/imagem-produto-hero.jpg" alt="Imagem hero">
+                        <!-- after aqui no css - estilo circulo -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="estatisticas" id="estatisticas">
+            <div class="interface">
+                <dl class="estatisticas-lista">
+                    <div class="dados">
+                        <dt>2026</dt> <!-- dt já serve como titulo-->
+                        <dd>Ano de atuação</dd> <!-- dd já serve como paragrafo-->
+                    </div>
+
+                    <div class="dados">
+                        <dt>50+</dt>
+                        <dd>Projetso Feitos</dd>
+                    </div>
+
+                    <div class="dados">
+                        <dt>3894+</dt>
+                        <dd>Clientes atendidos</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <div class="interface">
+                <div class="grid-sobre">
+                    <div class="sobre-img">
+                        <img src="images/imagem-produto.jpg" alt="Imagem Produto">
+                    </div>
+
+                    <header class="titulo-sobre">
+                        <h2>Titulo Sobre <span>Assunto</span></h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga architecto nobis officia! Sapiente dolorem assumenda aperiam voluptatum porro. Consectetur ipsum quisquam a repellat culpa ullam hic facere libero asperiores ad.</p>
+                    </header>
+                </div>
+            </div>
+        </section>
+
+        <section class="produtos" id="produtos">
+            <section class="produto produto-start">
+                <div class="descricao">
+                    <h1>Nome Produto</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores a pariatur amet iusto eveniet excepturi id obcaecati quod velit, tenetur laudantium sit nostrum perferendis. Iste nemo soluta voluptates pariatur velit.</p>
+                    
+                    <a href="#" aria-label="Veja mais sobre esse produto" class="btn-produto">Veja mais</a>
+                </div>
+                <img src="images/produto-1.jpg" alt="Produto 1" class="produto-1">
+            </section>
+            <section class="produto produto-center">
+                <img src="images/produto-2.jpg" alt="Produto 1" class="produto-2">
+                <div class="descricao">
+                    <h1>Nome Produto</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores a pariatur amet iusto eveniet excepturi id obcaecati quod velit, tenetur laudantium sit nostrum perferendis. Iste nemo soluta voluptates pariatur velit.</p>
+                    
+                    <a href="#" aria-label="Veja mais sobre esse produto" class="btn-produto">Veja mais</a>
+                </div>
+            </section>
+            
+        </section>
+
+        <section class="comentarios" id="comentarios">
+            <div class="interface">
+                <div class="carrossel-container">
+
+                    <button class="carrossel-btn prev-btn" id="prevBtn"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="carrossel-btn next-btn" id="nextBtn"><i class="fa-solid fa-angle-right"></i></button>
+
+                    <div class="carrossel-viewport">
+    
+                        <ul class="carrossel-track" id="carrosselTrack">
+                            <li class="carrossel-card">
+                                <article class="card-coment">
+                                    <section class="card-header">
+                                        <img src="images/pessoas/pessoa-comentario-foto.jpg" alt="Foto Cliente">
+                                        <div class="card-titulo">
+                                            <h2>Nome pessoa aqui</h2>
+                                            <p>5 
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                            </p>
+                                        </div>
+                                    </section>
+                                    <section class="card-texto">
+                                        <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dolorem odio aliquid a officia. Earum repellat nemo sint consectetur itaque, fuga deleniti nulla quasi, sequi sunt cumque molestiae necessitatibus dolores.&rdquo;</p>
+                                    </section>
+                                </article>
+                            </li>
+                            <li class="carrossel-card">
+                                <article class="card-coment">
+                                    <section class="card-header">
+                                        <img src="images/pessoas/pessoa-comentario-foto.jpg" alt="Foto Cliente">
+                                        <div class="card-titulo">
+                                            <h2>Nome pessoa aqui</h2>
+                                            <p>5 
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                            </p>
+                                        </div>
+                                    </section>
+                                    <section class="card-texto">
+                                        <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dolorem odio aliquid a officia. Earum repellat nemo sint consectetur itaque, fuga deleniti nulla quasi, sequi sunt cumque molestiae necessitatibus dolores.&rdquo;</p>
+                                    </section>
+                                </article>
+                            </li>
+                            <li class="carrossel-card">
+                                <article class="card-coment">
+                                    <section class="card-header">
+                                        <img src="images/pessoas/pessoa-comentario-foto.jpg" alt="Foto Cliente">
+                                        <div class="card-titulo">
+                                            <h2>Nome pessoa aqui</h2>
+                                            <p>5 
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                            </p>
+                                        </div>
+                                    </section>
+                                    <section class="card-texto">
+                                        <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dolorem odio aliquid a officia. Earum repellat nemo sint consectetur itaque, fuga deleniti nulla quasi, sequi sunt cumque molestiae necessitatibus dolores.&rdquo;</p>
+                                    </section>
+                                </article>
+                            </li>
+                            <li class="carrossel-card">
+                                <article class="card-coment">
+                                    <section class="card-header">
+                                        <img src="images/pessoas/pessoa-comentario-foto.jpg" alt="Foto Cliente">
+                                        <div class="card-titulo">
+                                            <h2>Nome pessoa aqui</h2>
+                                            <p>5 
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                                <i class="fa-solid fa-star" style="color: rgb(255, 212, 59);"></i>
+                                            </p>
+                                        </div>
+                                    </section>
+                                    <section class="card-texto">
+                                        <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dolorem odio aliquid a officia. Earum repellat nemo sint consectetur itaque, fuga deleniti nulla quasi, sequi sunt cumque molestiae necessitatibus dolores.&rdquo;</p>
+                                    </section>
+                                </article>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>
