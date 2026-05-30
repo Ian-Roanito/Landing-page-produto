@@ -32,10 +32,13 @@ btnMobile.addEventListener('click', () => {
 link.forEach(link => {
     link.addEventListener('click', () => {
 
-        html.classList.toggle('active-body');
-        body.classList.remove('active-body');
-        navList.classList.remove('active');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
+        if (navList.classList.contains('active')) {
+
+            html.classList.toggle('active-body');
+            body.classList.remove('active-body');
+            navList.classList.remove('active');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
     })
 })

@@ -17,14 +17,8 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
     
-    &.active-body {
-        overflow: hidden;
-    }
 }
+
 body {
     background-color: lightgray;
-
-    &.active-body {
-        overflow: hidden;
-    }
 }

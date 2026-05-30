@@ -266,8 +266,9 @@
 
 /* SEÇÃO COMENTARIOS */
 .comentarios {
-    overflow: hidden;
-    padding: 100px 0px;
+    background-color: rgb(158, 52, 69);
+    
+    padding: 130px 0px;
     position: relative;
     
 
@@ -280,11 +281,11 @@
     &::before {
         content: '';
         position: absolute;
-        top: -100px;
-        left: -100px;
+        top: -80px;
+        left: 50px;
         
-        width: clamp(200px, 50vw, 500px);
-        height: clamp(200px, 50vw, 500px);
+        width: clamp(150px, 40vw, 350px);
+        height: clamp(150px, 40vw, 350px);
         border-radius: 50%;
         background: url('images/produto-1.jpg') center center no-repeat scroll;
         background-size: cover;
@@ -295,16 +296,16 @@
     &::after {
         content: '';
         position: absolute;
-        bottom: -100px;
-        right: -100px;
-        width: clamp(200px, 50vw, 500px);
-        height: clamp(200px, 50vw, 500px);
+        bottom: -80px;
+        right: 80px;
+        width: clamp(150px, 40vw, 350px);
+        height: clamp(150px, 40vw, 350px);
         border-radius: 50%;
         background: url('images/produto-3.jpg') center center no-repeat scroll;
         background-size: cover;
         border: 20px solid lightgray;
         outline: 10px solid lightblue;
-        z-index: -1;
+        z-index: 1;
     }
 }
 
@@ -312,6 +313,7 @@
     position: relative;
     width: 90%;
     width: clamp(340px, 50vw, 800px);
+    z-index: 5;
     
     .carrossel-viewport {
         overflow: hidden;
@@ -391,6 +393,7 @@
 
 .mais-produtos {
     padding: 100px 0px;
+    margin: 100px 0px;
 
     .interface {
         display: flex;
@@ -473,7 +476,13 @@
                         position: absolute;
                         top: 89%;
                         left: 50%;
+                        transition: background-color 0.5s, color 0.5s;
                         transform: translateX(-50%);
+
+                        &:hover {
+                            background-color: white;
+                            color: black;
+                        }
                         
                     }
                 }
@@ -485,6 +494,92 @@
 }
 
 /* FIM DA SEÇÃO MAIS PRODUTOS */
+
+
+/* SEÇÃO SOBRE NÓS */
+
+.sobre-nos {
+    margin: 100px 0px;
+    padding: 80px 0px;
+}
+
+.interface {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        height: 400px;
+        
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 0;
+            transition: tarnsform 0.5s;
+            animation: alternarSlides 30s infinite; /* 30s total: 10s cada*/
+
+            .texto-conteudo {
+                flex: 1;
+                padding: 20px;
+                color: #333;
+
+                h2 {
+                    font-size: clamp(1.2rem, 4vw, 2.5rem);
+                    line-height: 1.1;
+
+                    span {
+                        display: block;
+                    }
+                }
+                
+                p {
+                    margin: 20px 0px;
+                }
+            }
+            
+            img {
+                flex: 1;
+                max-width: 50%;
+                height: auto ;
+                object-fit: cover;
+            }
+        }
+        
+        .slide:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slide:nth-child(2) {
+            animation-delay: 10s;
+        }
+        
+        .slide:nth-child(3) {
+            animation-delay: 20s;
+        }
+    }
+}
+
+@keyframes alternarSlides {
+    0% { opacity: 0;}
+    3% { opacity: 1;}
+    33.33% { opacity: 1;}
+    36.33% { opacity: 0;}
+    99% {transform: translateX(2%)}
+    100% { opacity: 0;}
+    
+}
+
+/* FIM DA SEÇÃO SOBRE NÓS */
 
 @media (max-width: 1150px) {
     .mais-produtos .interface .secao-produtos {
@@ -621,4 +716,20 @@
     
         }
     }
-}
+
+    .comentarios {
+        overflow: hidden;
+
+        &::before, &::after {
+            display: none;
+        }
+    }
+
+    .slideshow-container .slide {
+        flex-direction: column;
+
+        .texto-conteudo {
+            text-align: center;
+        }
+    }
+} 

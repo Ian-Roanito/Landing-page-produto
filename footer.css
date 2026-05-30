@@ -1,0 +1,129 @@
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    padding: 20px;
+    background-color: white;
+}
+
+.top-footer {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "informacoes lista-links contato";
+
+    .informacoes {
+        grid-area: informacoes;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .logo {
+            margin: 5px;
+
+            p {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        .redes-sociais {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                i {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .lista-links {
+        grid-area: lista-links;
+        display: flex;
+        justify-content: space-around;
+
+        ul {
+            list-style: none;
+            line-height: 2.1;
+
+            a {
+                text-decoration: none;
+                color: black;
+                border-bottom: 2px solid transparent;
+                transition: border-color 0.5s;
+
+                &:hover {
+                    border-color: black;
+                }
+            }
+        }
+
+    }
+
+    .contato {
+        grid-area: contato;
+        justify-self: center;
+        line-height: 2.1;
+
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+        .card-contato {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+    }
+}
+
+.bottom-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 2px solid black;
+}
+
+@media (max-width: 1020px) {
+
+    .top-footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "informacoes informacoes"
+            "lista-links contato";
+
+        .informacoes {
+            margin-bottom: 20px;
+
+            .logo p {
+                max-width: 500px;
+            }
+        }
+    }
+ 
+}
+
+@media (max-width: 720px) {
+    .top-footer {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "informacoes"
+            "lista-links"
+            "contato";
+        text-align: center;
+
+        .informacoes {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

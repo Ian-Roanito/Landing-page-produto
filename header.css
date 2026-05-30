@@ -88,7 +88,13 @@
     /* Usar essas configurações para o menu mobile */
     html, body {
         overflow-x: hidden;
+
+        &.active-body {
+            overflow: hidden;
+        }
     }
+
+    
 
 
     #header .interface .mobile-menu {
