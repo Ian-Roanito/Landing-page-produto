@@ -530,7 +530,7 @@
 
             .texto-conteudo {
                 flex: 1;
-                padding: 20px;
+                padding: 10px;
                 color: #333;
 
                 h2 {
@@ -725,11 +725,16 @@
         }
     }
 
-    .slideshow-container .slide {
+    .interface .slideshow-container .slide {
         flex-direction: column;
 
         .texto-conteudo {
             text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: 350px;
         }
     }
 } 
