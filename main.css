@@ -117,6 +117,7 @@
 
     .estatisticas-lista {
         display: flex;
+        gap: 100px;
         justify-content: space-around;
         align-items: center;
 
