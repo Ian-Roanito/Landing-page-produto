@@ -14,6 +14,20 @@
         align-items: center;
         position: relative;
 
+        .logo {
+
+            img {
+                width: 130px;
+            }
+
+            .logo-branca {
+                display: none;
+            }
+        }
+        
+
+        
+
         .mobile-menu {
             display: none;
 
@@ -80,6 +94,16 @@
 
     &.rolar .nav-list ul a {
         color: white;
+    }
+
+    &.rolar {
+        .logo-azul {
+            display: none;
+        }
+
+        .logo .logo-branca {
+            display: block;
+        }
     }
 }
 
